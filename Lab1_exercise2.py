@@ -39,7 +39,7 @@ lin_reg.predict(x_new)
 theta_best_svd, residuals , rank ,s = np.linalg.lstsq(x_b,y,rcond=1e-6)
 print(theta_best_svd)
 
-#### using gradient descent 
+#### using gradient descent --- batch gradient descent
 eta=0.1 ##learning rate
 n_iterations=1000
 m=1000
@@ -78,6 +78,7 @@ for epoch in range(n_epochs):
         eta = learning_schedule(epoch * m + i)
         theta = theta - eta * gradients
 print (gradients)
+
 ## doing Stochastic Gradient Descent USING SKLEARN
 from sklearn.linear_model import SGDRegressor
 sgd_reg = SGDRegressor(max_iter=1000, tol=1e-3, penalty=None, eta0=0.1)
