@@ -16,3 +16,6 @@ print(x)
 poly = PolynomialFeatures(degree=2)
 transformed = poly.fit_transform(x)
 print(transformed)
+
+#feature name
+print(poly.get_feature_names(input_features= None))
