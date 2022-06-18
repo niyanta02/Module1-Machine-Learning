@@ -21,4 +21,7 @@ x_b = np.c_[np.ones((100,1)),x]
 theta_best = np.linalg.inv(x_b.T.dot(x_b)).dot(x_b.T).dot(y)
 print(theta_best)
 
-
+x_new = np.array([[0],[2]])
+x_new_b= np.c_[np.ones((2,1)),x_new]
+y_predict = x_new_b.dot(theta_best)
+y_predict
