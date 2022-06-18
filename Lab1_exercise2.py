@@ -59,8 +59,8 @@ plt.show()
 n_epochs = 50
 t0, t1 = 5, 50  # learning schedule hyperparameters
 m = 100
-#X = 2 * np.random.rand(100, 1)
-#y = 4 + 3 * x + np.random.randn(100, 1)
+X = 2 * np.random.rand(100, 1)
+y = 4 + 3 * x + np.random.randn(100, 1)
 
 x_b = np.c_[np.ones((100, 1)), x]
 
@@ -85,7 +85,7 @@ sgd_reg = SGDRegressor(max_iter=1000, tol=1e-3, penalty=None, eta0=0.1)
 sgd_reg.fit(x, y.ravel())
 print(sgd_reg.intercept_, sgd_reg.coef_)
 
- ### mini batch
-       
+### mini batch
+      
 
 
